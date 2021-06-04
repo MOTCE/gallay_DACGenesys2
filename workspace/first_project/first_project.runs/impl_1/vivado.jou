@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Jun  4 13:30:33 2021
+# Process ID: 9700
+# Current directory: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/first_project/first_project.runs/impl_1
+# Command line: vivado.exe -log example.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source example.tcl -notrace
+# Log file: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/first_project/first_project.runs/impl_1/example.vdi
+# Journal file: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/first_project/first_project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source example.tcl -notrace
