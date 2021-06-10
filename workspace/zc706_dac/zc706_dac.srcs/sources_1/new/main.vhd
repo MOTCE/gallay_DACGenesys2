@@ -31,8 +31,12 @@ entity main is
     Port (
         clk_n : IN STD_LOGIC;
         clk_p : IN STD_LOGIC;
+        
         out_n : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-        out_p : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+        out_p : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+        
+        dataclk_n : OUT STD_LOGIC;
+        dataclk_p : OUT STD_LOGIC
      );
 end main;
 
@@ -41,7 +45,8 @@ architecture Behavioral of main is
 signal single_clk : STD_LOGIC;
 
 -- 2's complement initialized at -32768
-signal counter : STD_LOGIC_VECTOR(15 DOWNTO 0) := "1000000000000000";
+signal counter : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+signal increment : STD_LOGIC := '1';
 
 begin
 
@@ -67,12 +72,25 @@ begin
     begin
         if rising_edge(single_clk) then
             if counter = "0111111111111111" then
-                counter <= "1000000000000000";
-            else
-                counter <= counter + '1';
+                increment <= '0';
+            elsif counter = "100000000000" then
+                increment <= '1';
             end if;
+            
+            if increment = '1' then
+                counter <= counter + '1';
+            else
+                counter <= counter - '1';
+            end if;  
         end if;
     end process;
+    
+    OBUFDS_DATACLK: OBUFDS
+    port map (
+        O => dataclk_p,
+        OB => dataclk_n,
+        I => single_clk
+    );
 
 end Behavioral;
 

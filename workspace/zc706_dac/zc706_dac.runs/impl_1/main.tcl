@@ -66,6 +66,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 1
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z045ffg900-2
   set_property board_part_repo_paths {C:/Users/Projet/AppData/Roaming/Xilinx/Vivado/2019.2/xhub/board_store} [current_project]
   set_property board_part xilinx.com:zc706:part0:1.4 [current_project]
