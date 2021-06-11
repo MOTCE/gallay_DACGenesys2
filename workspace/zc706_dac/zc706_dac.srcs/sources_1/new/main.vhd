@@ -81,7 +81,7 @@ begin
                 counter <= counter + '1';
             else
                 counter <= counter - '1';
-            end if;  
+            end if;
         end if;
     end process;
     
