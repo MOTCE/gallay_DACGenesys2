@@ -87,7 +87,7 @@ X"257e", X"27bd", X"2a0b", X"2c65", X"2ecc", X"3140", X"33c0", X"364c",
 X"38e3", X"3b85", X"3e32", X"40e9", X"43a9", X"4673", X"4946", X"4c21", 
 X"4f04", X"51ef", X"54e1", X"57d9", X"5ad8", X"5ddc", X"60e6", X"63f4", 
 X"6707", X"6a1e", X"6d38", X"7054", X"7374", X"7695", X"79b8", X"7cdb"
-		);
+        );
 
 begin
 
@@ -112,9 +112,9 @@ begin
 --    process (single_clk)
 --    begin
 --        if rising_edge(single_clk) then
---            if counter = "0111111111111111" then
+--            if counter = "0111111111111110" then
 --                increment <= '0';
---            elsif counter = "100000000000" then
+--            elsif counter = "1000000000000001" then
 --                increment <= '1';
 --            end if;
             
@@ -126,13 +126,14 @@ begin
 --        end if;
 --    end process;
 
+
     process(single_clk)
 	begin
-	if(rising_edge(single_clk)) then     
+	if rising_edge(single_clk) then     
 		counter(15 downto 0) <= sine(i);
 		i <= i+ 1;
 		if(i = 255) then
-		i <= 0;
+		  i <= 0;
 		end if;
 	end if;
 	end process;
@@ -152,4 +153,3 @@ begin
     );
 
 end Behavioral;
-
