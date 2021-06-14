@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Fri Jun 11 14:11:22 2021
+| Date         : Mon Jun 14 10:27:17 2021
 | Host         : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file main_clock_utilization_routed.rpt
 | Design       : main
@@ -41,11 +41,11 @@ Table of Contents
 2. Global Clock Resources
 -------------------------
 
-+-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------+------------------------+-----------------+
-| Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin             | Net             |
-+-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------+------------------------+-----------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 1 |          17 |               1 |              |       | single_clk_BUFG_inst/O | single_clk_BUFG |
-+-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------+------------------------+-----------------+
++-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+-------+------------------------+-----------------+
+| Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin             | Net             |
++-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+-------+------------------------+-----------------+
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 1 |          17 |               1 |              |       | single_clk_BUFG_inst/O | single_clk_BUFG |
++-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+-------+------------------------+-----------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 
@@ -53,11 +53,11 @@ Table of Contents
 3. Global Clock Source Details
 ------------------------------
 
-+-----------+-----------+-----------------+------------+------------+--------------+-------------+-----------------+---------------------+--------------+--------------+------------+
-| Source Id | Global Id | Driver Type/Pin | Constraint | Site       | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin   | Net        |
-+-----------+-----------+-----------------+------------+------------+--------------+-------------+-----------------+---------------------+--------------+--------------+------------+
-| src0      | g0        | IBUFDS/O        | IOB_X1Y274 | IOB_X1Y274 | X1Y5         |           1 |               0 |                     |              | IBUFDS_clk/O | single_clk |
-+-----------+-----------+-----------------+------------+------------+--------------+-------------+-----------------+---------------------+--------------+--------------+------------+
++-----------+-----------+-----------------+------------+-----------+--------------+-------------+-----------------+---------------------+--------------+--------------+------------+
+| Source Id | Global Id | Driver Type/Pin | Constraint | Site      | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin   | Net        |
++-----------+-----------+-----------------+------------+-----------+--------------+-------------+-----------------+---------------------+--------------+--------------+------------+
+| src0      | g0        | IBUFDS/O        | IOB_X0Y74  | IOB_X0Y74 | X0Y1         |           1 |               0 |                     |              | IBUFDS_clk/O | single_clk |
++-----------+-----------+-----------------+------------+-----------+--------------+-------------+-----------------+---------------------+--------------+--------------+------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 
@@ -76,7 +76,7 @@ Table of Contents
 | X1Y1              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  3700 |    0 |  1050 |    0 |    80 |    0 |    40 |    0 |    60 |
 | X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4500 |    0 |  1600 |    0 |    80 |    0 |    40 |    0 |    80 |
 | X1Y2              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  3700 |    0 |  1050 |    0 |    80 |    0 |    40 |    0 |    60 |
-| X0Y3              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   17 |  4500 |   16 |  1600 |    0 |    80 |    0 |    40 |    0 |    80 |
+| X0Y3              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   16 |  4500 |    8 |  1600 |    0 |    80 |    0 |    40 |    0 |    80 |
 | X1Y3              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |  3550 |    0 |  1000 |    0 |    70 |    0 |    35 |    0 |    60 |
 | X0Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4500 |    0 |  1600 |    0 |    80 |    0 |    40 |    0 |    80 |
 | X1Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4100 |    0 |  1150 |    0 |   100 |    0 |    50 |    0 |    60 |
@@ -138,7 +138,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net             |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------+
-| g0        | n/a   | BUFG/O          | None       |          17 |               1 | 17 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | single_clk_BUFG |
+| g0        | n/a   | BUFG/O          | None       |          17 |               1 | 16 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | single_clk_BUFG |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -147,16 +147,16 @@ All Modules
 
 
 # Location of BUFG Primitives 
-set_property LOC BUFGCTRL_X0Y16 [get_cells single_clk_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y0 [get_cells single_clk_BUFG_inst]
 
 # Location of IO Primitives which is load of clock spine
 set_property LOC IOB_X0Y172 [get_cells OBUFDS_DATACLK]
 
 # Location of clock ports
-set_property LOC IOB_X1Y273 [get_ports clk_n]
-set_property LOC IOB_X1Y274 [get_ports clk_p]
+set_property LOC IOB_X0Y73 [get_ports clk_n]
+set_property LOC IOB_X0Y74 [get_ports clk_p]
 
-# Clock net "single_clk_BUFG" driven by instance "single_clk_BUFG_inst" located at site "BUFGCTRL_X0Y16"
+# Clock net "single_clk_BUFG" driven by instance "single_clk_BUFG_inst" located at site "BUFGCTRL_X0Y0"
 #startgroup
 create_pblock {CLKAG_single_clk_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_single_clk_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=OBUFDS_DATACLK} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="single_clk_BUFG"}]]]

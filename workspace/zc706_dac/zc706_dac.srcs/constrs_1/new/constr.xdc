@@ -1,8 +1,13 @@
 # LVDS CLOCK
-set_property PACKAGE_PIN H9 [get_ports clk_p]
-set_property IOSTANDARD LVDS [get_ports clk_p]
-set_property PACKAGE_PIN G9 [get_ports clk_n]
-set_property IOSTANDARD LVDS [get_ports clk_n]
+#set_property PACKAGE_PIN H9 [get_ports clk_p]
+#set_property IOSTANDARD LVDS [get_ports clk_p]
+#set_property PACKAGE_PIN G9 [get_ports clk_n]
+#set_property IOSTANDARD LVDS [get_ports clk_n]
+
+set_property PACKAGE_PIN AG17 [get_ports clk_p]
+set_property IOSTANDARD LVDS_25 [get_ports clk_p]
+set_property PACKAGE_PIN AG16 [get_ports clk_n]
+set_property IOSTANDARD LVDS_25 [get_ports clk_n]
 
 # FMC PINS LPC
 set_property PACKAGE_PIN AF30 [get_ports out_p[0]]
@@ -90,3 +95,9 @@ set_property PACKAGE_PIN AE27 [get_ports dataclk_p]
 set_property IOSTANDARD LVDS_25 [get_ports dataclk_p]
 set_property PACKAGE_PIN AF27 [get_ports dataclk_n]
 set_property IOSTANDARD LVDS_25 [get_ports dataclk_n]
+
+## SYNC SIGNALS
+set_property PACKAGE_PIN AB29 [get_ports sync_p]
+set_property IOSTANDARD LVDS_25 [get_ports sync_p]
+set_property PACKAGE_PIN AB30 [get_ports sync_n]
+set_property IOSTANDARD LVDS_25 [get_ports sync_n]
