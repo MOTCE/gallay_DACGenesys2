@@ -18,7 +18,9 @@ entity ddr_main is
         dataclk_p : OUT STD_LOGIC;
         
         sync_n: OUT STD_LOGIC;
-        sync_p: OUT STD_LOGIC
+        sync_p: OUT STD_LOGIC;
+        
+        single_clk_out : OUT STD_LOGIC
      );
 end ddr_main;
 
@@ -31,11 +33,34 @@ signal counter : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
 signal increment : STD_LOGIC := '1';
 signal transmit : STD_LOGIC := '1';
 
+signal counterBuffer : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
 signal dataIdx : integer range 0 to 255:=0;
 signal sineIdx : integer range 0 to 255:=0;
 
 signal dataBuffer : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
 signal sineBuffer : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000";
+
+signal RISING_EDGE_BUFFER : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal FALLING_EDGE_BUFFER : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+signal SIGNAL_1_BUFFER : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal SIGNAL_2_BUFFER : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal SIGNAL_3_BUFFER : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal SIGNAL_4_BUFFER : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+signal rising_edge_enable : STD_LOGIC := '1';
+signal falling_edge_enable : STD_LOGIC := '1';
+
+signal signal_1_enable : STD_LOGIC;
+signal signal_2_enable : STD_LOGIC;
+signal signal_3_enable : STD_LOGIC;
+signal signal_4_enable : STD_LOGIC;
+
+signal max_signal : STD_LOGIC_VECTOR(15 DOWNTO 0) := "0111111111111111";
+signal min_signal : STD_LOGIC_VECTOR(15 DOWNTO 0) := "1000000000000000";
+
+
 
 type memory is array (0 to 255) of std_logic_vector(15 downto 0);
 constant sine : memory := (
@@ -78,6 +103,55 @@ begin
     );
     
     
+--   ODDR_GEN:
+--   for INDEX in 0 to 15 generate
+--       ODDR_inst : ODDR
+--       generic map(
+--          DDR_CLK_EDGE => "OPPOSITE_EDGE", -- "OPPOSITE_EDGE" or "SAME_EDGE" 
+--          INIT => '0',   -- Initial value for Q port ('1' or '0')
+--          SRTYPE => "SYNC") -- Reset Type ("ASYNC" or "SYNC")
+--       port map (
+--          Q => counter(INDEX),   -- 1-bit DDR output
+--          C => single_clk,    -- 1-bit clock input
+--          CE => '1',  -- 1-bit clock enable input
+--          D1 => RISING_EDGE_BUFFER(INDEX),  -- 1-bit data input (positive edge)
+--          D2 => FALLING_EDGE_BUFFER(INDEX),  -- 1-bit data input (negative edge)
+--          R => '0'    -- 1-bit reset input
+--       );
+--    end generate;
+    
+--    RISING_EDGE_PROCESS:
+--	process(single_clk)
+--	begin
+--	if single_clk'event and single_clk = '1' then
+--	    if rising_edge_enable = '1' then
+--	       RISING_EDGE_BUFFER <= SIGNAL_1_BUFFER;
+--	    else
+--	       RISING_EDGE_BUFFER <= SIGNAL_3_BUFFER;
+--	    end if;
+--	   	rising_edge_enable <= not rising_edge_enable;
+--	end if;
+--	end process;
+	
+--    FALLING_EDGE_PROCESS:
+--	process(single_clk)
+--	begin
+--	if single_clk'event and single_clk = '0' then
+--	    if falling_edge_enable = '1' then
+--	       FALLING_EDGE_BUFFER <= SIGNAL_2_BUFFER;
+--	    else
+--	       FALLING_EDGE_BUFFER <= SIGNAL_4_BUFFER;
+--	    end if;
+--	   	falling_edge_enable <= not falling_edge_enable;
+--	end if;
+--	end process;
+	
+--	signal_1_enable <= rising_edge_enable;
+--	signal_3_enable <= not rising_edge_enable;
+	
+--	signal_2_enable <= falling_edge_enable;
+--	signal_4_enable <= not falling_edge_enable;
+	
    ODDR_GEN:
    for INDEX in 0 to 15 generate
        ODDR_inst : ODDR
@@ -118,5 +192,34 @@ begin
 	    end if;
 	end if;
 	end process;
+	
+--	COUNTER_BUFFER_PROCESS:
+--	process(single_clk)
+--	variable COUNT_VALUE : INTEGER RANGE 0 to 255;
+--	begin
+--	if single_clk'event and single_clk = '1' then
+--	   COUNT_VALUE := COUNT_VALUE + 1;
+--	end if;
+--	counterBuffer <= std_logic_vector(to_unsigned(COUNT_VALUE, counterBuffer'length));
+--	end process;
+
+--   ODDR_GEN:
+--   for INDEX in 0 to 15 generate
+--       ODDR_inst : ODDR
+--       generic map(
+--          DDR_CLK_EDGE => "OPPOSITE_EDGE", -- "OPPOSITE_EDGE" or "SAME_EDGE" 
+--          INIT => '0',   -- Initial value for Q port ('1' or '0')
+--          SRTYPE => "SYNC") -- Reset Type ("ASYNC" or "SYNC")
+--       port map (
+--          Q => counter(INDEX),   -- 1-bit DDR output
+--          C => single_clk,    -- 1-bit clock input
+--          CE => '1',  -- 1-bit clock enable input
+--          D1 => max_signal(INDEX),  -- 1-bit data input (positive edge)
+--          D2 => min_signal(INDEX),  -- 1-bit data input (negative edge)
+--          R => '0'    -- 1-bit reset input
+--       );
+--    end generate;
+
+    single_clk_out <= single_clk;
 
 end Behavioral;

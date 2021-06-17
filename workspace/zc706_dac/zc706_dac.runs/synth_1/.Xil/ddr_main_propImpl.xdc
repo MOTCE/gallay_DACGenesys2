@@ -75,3 +75,5 @@ set_property src_info {type:XDC file:1 line:100 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN AB29 [get_ports sync_p]
 set_property src_info {type:XDC file:1 line:102 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AB30 [get_ports sync_n]
+set_property src_info {type:XDC file:1 line:106 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AD18 [get_ports single_clk_out]

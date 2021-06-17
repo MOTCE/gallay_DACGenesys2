@@ -1,0 +1,61 @@
+   x00	   x0180
+   x01	   x0D0E
+   x02	   xF000
+   x03	   xF001
+   x04	   xA092
+   x05	   xBF78
+   x06	   x3300
+   x07	   xFFFF
+   x08	   x0000
+   x09	   x8000
+   x0A	   x0000
+   x0B	   x0000
+   x0C	   x0400
+   x0D	   x0400
+   x0E	   x0400
+   x0F	   x0400
+   x10	   x0000
+   x11	   x0000
+   x12	   x0000
+   x13	   x0000
+   x14	   x0000
+   x15	   x0000
+   x16	   x0000
+   x17	   x0000
+   x18	   x280F
+   x19	   x0440
+   x1A	   x0020
+   x1B	   x0000
+   x1C	   x0000
+   x1D	   x0000
+   x1E	   x1111
+   x1F	   x1146
+   x20	   x8800
+   x22	   x1B1B
+   x23	   xFFFF
+   x24	   x0000
+   x25	   x7A7A
+   x26	   xB6B6
+   x27	   xEAEA
+   x28	   x4545
+   x29	   x1A1A
+   x2A	   x1616
+   x2B	   xAAAA
+   x2C	   xC6C6
+   x2D	   x0004
+   x2E	   x0000
+   x2F	   x0000
+   x30	   x0000
+   x7F	   x0004
+CDCE62005 Registers
+Freq:19,000000MHz
+Address	Data
+00		80400000
+01		811C0321
+02		81400302
+03		81400303
+04		00040304
+05		38101A85
+06		04BF1F06
+07		151877F7
+08		20001808

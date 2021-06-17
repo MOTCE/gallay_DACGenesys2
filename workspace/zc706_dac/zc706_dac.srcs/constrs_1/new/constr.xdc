@@ -101,3 +101,7 @@ set_property PACKAGE_PIN AB29 [get_ports sync_p]
 set_property IOSTANDARD LVDS_25 [get_ports sync_p]
 set_property PACKAGE_PIN AB30 [get_ports sync_n]
 set_property IOSTANDARD LVDS_25 [get_ports sync_n]
+
+# SMA FOR CLOCK OUTPUT SIGNAL
+set_property PACKAGE_PIN AD18 [get_ports single_clk_out]
+set_property IOSTANDARD LVCMOS25 [get_ports single_clk_out]

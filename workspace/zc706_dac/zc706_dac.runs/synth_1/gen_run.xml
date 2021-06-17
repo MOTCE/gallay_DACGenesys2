@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1623778595">
+<GenRun Id="synth_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1623960094">
   <File Type="PA-TCL" Name="ddr_main.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="ddr_main_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ddr_main_reports.tcl"/>
@@ -13,6 +13,13 @@
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ddr_main.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dac_toplevel.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -49,9 +56,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
