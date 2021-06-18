@@ -1,0 +1,17 @@
+vhdl xil_defaultlib  \
+"../../../../zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i0/sim/wave_generator_c_counter_binary_v12_0_i0.vhd" \
+"../../../../zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i1/sim/wave_generator_c_counter_binary_v12_0_i1.vhd" \
+"../../../../zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i2/sim/wave_generator_c_counter_binary_v12_0_i2.vhd" \
+"../../../ipstatic/xil_defaultlib/hdl/conv_pkg.vhd" \
+"../../../ipstatic/xil_defaultlib/hdl/synth_reg.vhd" \
+"../../../ipstatic/xil_defaultlib/hdl/synth_reg_w_init.vhd" \
+"../../../ipstatic/xil_defaultlib/hdl/srl17e.vhd" \
+"../../../ipstatic/xil_defaultlib/hdl/srl33e.vhd" \
+"../../../ipstatic/xil_defaultlib/hdl/synth_reg_reg.vhd" \
+"../../../ipstatic/xil_defaultlib/hdl/single_reg_w_init.vhd" \
+"../../../ipstatic/xil_defaultlib/hdl/xlclockdriver_rd.vhd" \
+"../../../ipstatic/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd" \
+"../../../ipstatic/xil_defaultlib/hdl/wave_generator.vhd" \
+"../../../../zc706_dac.srcs/sources_1/ip/WAVE_GEN/sim/WAVE_GEN.vhd" \
+
+nosort

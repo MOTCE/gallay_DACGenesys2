@@ -1,89 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1623960094">
-  <File Type="BITSTR-BMM" Name="ddr_main_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="ddr_main_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="ddr_main_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="ddr_main_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="ddr_main.tcl"/>
-  <File Type="OPT-TIMING" Name="ddr_main_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="ddr_main_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="ddr_main_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="ddr_main_reports.tcl"/>
-  <File Type="OPT-DRC" Name="ddr_main_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="ddr_main.hwdef"/>
-  <File Type="PWROPT-DCP" Name="ddr_main_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="ddr_main_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="ddr_main_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="ddr_main_placed.dcp"/>
-  <File Type="PLACE-IO" Name="ddr_main_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="ddr_main_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="ddr_main_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="ddr_main_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="ddr_main_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="ddr_main_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="ddr_main_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="ddr_main_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="ddr_main_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="ddr_main.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="ddr_main_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="ddr_main_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="ddr_main_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="ddr_main.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="ddr_main_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="ddr_main_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="ddr_main_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="ddr_main_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="ddr_main_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="ddr_main_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="ddr_main_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="ddr_main.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="ddr_main_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ddr_main_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ddr_main_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="ddr_main_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="ddr_main_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="ddr_main_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="ddr_main_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="ddr_main_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="ddr_main_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="ddr_main_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="ddr_main_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="ddr_main_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="ddr_main_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="ddr_main_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ddr_main_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ddr_main_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ddr_main_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ddr_main_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ddr_main_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ddr_main_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ddr_main_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="ddr_main.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ddr_main_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="ddr_main.rbt"/>
-  <File Type="BITSTR-NKY" Name="ddr_main.nky"/>
-  <File Type="PDI-FILE" Name="ddr_main.pdi"/>
-  <File Type="RCFI_FILE" Name="ddr_main.rcfi"/>
-  <File Type="CFI_FILE" Name="ddr_main.cfi"/>
-  <File Type="RNPI_FILE" Name="ddr_main.rnpi"/>
-  <File Type="NPI_FILE" Name="ddr_main.npi"/>
-  <File Type="RBD_FILE" Name="ddr_main.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1624028733">
+  <File Type="BITSTR-BMM" Name="dac_toplevel_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="dac_toplevel_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="dac_toplevel_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="dac_toplevel_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="dac_toplevel.tcl"/>
+  <File Type="OPT-TIMING" Name="dac_toplevel_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="dac_toplevel_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="dac_toplevel_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="dac_toplevel_reports.tcl"/>
+  <File Type="OPT-DRC" Name="dac_toplevel_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="dac_toplevel.hwdef"/>
+  <File Type="PWROPT-DCP" Name="dac_toplevel_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="dac_toplevel_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="dac_toplevel_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="dac_toplevel_placed.dcp"/>
+  <File Type="PLACE-IO" Name="dac_toplevel_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="dac_toplevel_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="dac_toplevel_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="dac_toplevel_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="dac_toplevel_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="dac_toplevel_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="dac_toplevel_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="dac_toplevel_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="dac_toplevel_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="dac_toplevel.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="dac_toplevel_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="dac_toplevel_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="dac_toplevel_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="dac_toplevel.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="dac_toplevel_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="dac_toplevel_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="dac_toplevel_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="dac_toplevel_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="dac_toplevel_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="dac_toplevel_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="dac_toplevel_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="dac_toplevel.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="dac_toplevel_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="dac_toplevel_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="dac_toplevel_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="dac_toplevel_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="dac_toplevel_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="dac_toplevel_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="dac_toplevel_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="dac_toplevel_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="dac_toplevel_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="dac_toplevel_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="dac_toplevel_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="dac_toplevel_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="dac_toplevel_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="dac_toplevel_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="dac_toplevel_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="dac_toplevel_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="dac_toplevel_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="dac_toplevel_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="dac_toplevel_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="dac_toplevel_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="dac_toplevel_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="dac_toplevel.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="dac_toplevel_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="dac_toplevel.rbt"/>
+  <File Type="BITSTR-NKY" Name="dac_toplevel.nky"/>
+  <File Type="PDI-FILE" Name="dac_toplevel.pdi"/>
+  <File Type="RCFI_FILE" Name="dac_toplevel.rcfi"/>
+  <File Type="CFI_FILE" Name="dac_toplevel.cfi"/>
+  <File Type="RNPI_FILE" Name="dac_toplevel.rnpi"/>
+  <File Type="NPI_FILE" Name="dac_toplevel.npi"/>
+  <File Type="RBD_FILE" Name="dac_toplevel.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="ddr_main.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="ddr_main.sysdef"/>
-  <File Type="BG-BGN" Name="ddr_main.bgn"/>
-  <File Type="BG-DRC" Name="ddr_main.drc"/>
-  <File Type="RDI-RDI" Name="ddr_main.vdi"/>
+  <File Type="BITSTR-LTX" Name="dac_toplevel.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="dac_toplevel.sysdef"/>
+  <File Type="BG-BGN" Name="dac_toplevel.bgn"/>
+  <File Type="BG-DRC" Name="dac_toplevel.drc"/>
+  <File Type="RDI-RDI" Name="dac_toplevel.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/ddr_main.vhd">
+    <File Path="$PSRCDIR/sources_1/new/dac3484_interface_module.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/dac_toplevel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ddr_main.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -99,7 +105,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ddr_main"/>
+      <Option Name="TopModule" Val="dac_toplevel"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -122,7 +128,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -133,4 +141,5 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="WAVE_GEN"/>
 </GenRun>

@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log ddr_main.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ddr_main.tcl -notrace
+EAStep vivado -log dac_toplevel.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source dac_toplevel.tcl -notrace
 
 

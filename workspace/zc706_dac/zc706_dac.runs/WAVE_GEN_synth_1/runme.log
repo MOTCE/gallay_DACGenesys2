@@ -1,0 +1,407 @@
+
+*** Running vivado
+    with args -log WAVE_GEN.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source WAVE_GEN.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source WAVE_GEN.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Projet/Desktop/Recherche/custom_ips'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.cache/ip 
+Command: synth_design -top WAVE_GEN -part xc7z045ffg900-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12112
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1390.805 ; gain = 242.125
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'WAVE_GEN' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/synth/WAVE_GEN.vhd:73]
+INFO: [Synth 8-3491] module 'wave_generator' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator.vhd:281' bound to instance 'U0' of component 'wave_generator' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/synth/WAVE_GEN.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'wave_generator' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator.vhd:294]
+INFO: [Synth 8-638] synthesizing module 'wave_generator_default_clock_driver' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator.vhd:261]
+INFO: [Synth 8-638] synthesizing module 'xlclockdriver' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/xlclockdriver_rd.vhd:59]
+	Parameter period bound to: 1 - type: integer 
+	Parameter log_2_period bound to: 1 - type: integer 
+	Parameter pipeline_regs bound to: 5 - type: integer 
+	Parameter use_bufg bound to: 0 - type: integer 
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 4'b0000 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'synth_reg_w_init' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/synth_reg_w_init.vhd:31' bound to instance 'clr_reg' of component 'synth_reg_w_init' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/xlclockdriver_rd.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'synth_reg_w_init' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/synth_reg_w_init.vhd:47]
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 4'b0000 
+	Parameter latency bound to: 1 - type: integer 
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 4'b0000 
+INFO: [Synth 8-3491] module 'single_reg_w_init' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/single_reg_w_init.vhd:22' bound to instance 'reg_comp' of component 'single_reg_w_init' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/synth_reg_w_init.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'single_reg_w_init' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/single_reg_w_init.vhd:37]
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 4'b0000 
+INFO: [Synth 8-113] binding component instance 'fdre_comp' to cell 'FDRE' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/single_reg_w_init.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'single_reg_w_init' (1#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/single_reg_w_init.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'synth_reg_w_init' (2#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/synth_reg_w_init.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'xlclockdriver' (3#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/xlclockdriver_rd.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator_default_clock_driver' (4#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator.vhd:261]
+INFO: [Synth 8-638] synthesizing module 'wave_generator_struct' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'sysgen_constant_fa580fbff1' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'sysgen_constant_fa580fbff1' (5#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'sysgen_constant_f06621f9ed' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'sysgen_constant_f06621f9ed' (6#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'sysgen_constant_f2a4cd945c' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'sysgen_constant_f2a4cd945c' (7#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'sysgen_constant_a02dbc4402' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:107]
+INFO: [Synth 8-256] done synthesizing module 'sysgen_constant_a02dbc4402' (8#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'sysgen_constant_6db572fb56' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'sysgen_constant_6db572fb56' (9#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'wave_generator_xlcounter_limit' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:358]
+	Parameter core_name0 bound to: wave_generator_c_counter_binary_v12_0_i0 - type: string 
+	Parameter op_width bound to: 16 - type: integer 
+	Parameter op_arith bound to: 1 - type: integer 
+	Parameter cnt_63_48 bound to: 0 - type: integer 
+	Parameter cnt_47_32 bound to: 0 - type: integer 
+	Parameter cnt_31_16 bound to: 0 - type: integer 
+	Parameter cnt_15_0 bound to: 21845 - type: integer 
+	Parameter count_limited bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'wave_generator_c_counter_binary_v12_0_i0' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i0/synth/wave_generator_c_counter_binary_v12_0_i0.vhd:59' bound to instance 'core_instance0' of component 'wave_generator_c_counter_binary_v12_0_i0' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:463]
+INFO: [Synth 8-638] synthesizing module 'wave_generator_c_counter_binary_v12_0_i0' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i0/synth/wave_generator_c_counter_binary_v12_0_i0.vhd:68]
+	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_WIDTH bound to: 16 - type: integer 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_RESTRICT_COUNT bound to: 0 - type: integer 
+	Parameter C_COUNT_TO bound to: 1 - type: string 
+	Parameter C_COUNT_BY bound to: 100000001 - type: string 
+	Parameter C_COUNT_MODE bound to: 0 - type: integer 
+	Parameter C_THRESH0_VALUE bound to: 1 - type: string 
+	Parameter C_CE_OVERRIDES_SYNC bound to: 0 - type: integer 
+	Parameter C_HAS_THRESH0 bound to: 0 - type: integer 
+	Parameter C_HAS_LOAD bound to: 0 - type: integer 
+	Parameter C_LOAD_LOW bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_FB_LATENCY bound to: 0 - type: integer 
+	Parameter C_AINIT_VAL bound to: 0 - type: string 
+	Parameter C_SINIT_VAL bound to: 0 - type: string 
+	Parameter C_SCLR_OVERRIDES_SSET bound to: 1 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'c_counter_binary_v12_0_14' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i2/hdl/c_counter_binary_v12_0_vh_rfs.vhd:2146' bound to instance 'U0' of component 'c_counter_binary_v12_0_14' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i0/synth/wave_generator_c_counter_binary_v12_0_i0.vhd:127]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator_c_counter_binary_v12_0_i0' (17#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i0/synth/wave_generator_c_counter_binary_v12_0_i0.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator_xlcounter_limit' (18#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:358]
+INFO: [Synth 8-638] synthesizing module 'wave_generator_xlcounter_limit__parameterized0' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:358]
+	Parameter core_name0 bound to: wave_generator_c_counter_binary_v12_0_i1 - type: string 
+	Parameter op_width bound to: 2 - type: integer 
+	Parameter op_arith bound to: 1 - type: integer 
+	Parameter cnt_63_48 bound to: 0 - type: integer 
+	Parameter cnt_47_32 bound to: 0 - type: integer 
+	Parameter cnt_31_16 bound to: 0 - type: integer 
+	Parameter cnt_15_0 bound to: 3 - type: integer 
+	Parameter count_limited bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'wave_generator_c_counter_binary_v12_0_i1' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i1/synth/wave_generator_c_counter_binary_v12_0_i1.vhd:59' bound to instance 'core_instance1' of component 'wave_generator_c_counter_binary_v12_0_i1' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:473]
+INFO: [Synth 8-638] synthesizing module 'wave_generator_c_counter_binary_v12_0_i1' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i1/synth/wave_generator_c_counter_binary_v12_0_i1.vhd:68]
+	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_WIDTH bound to: 2 - type: integer 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_RESTRICT_COUNT bound to: 0 - type: integer 
+	Parameter C_COUNT_TO bound to: 1 - type: string 
+	Parameter C_COUNT_BY bound to: 1 - type: string 
+	Parameter C_COUNT_MODE bound to: 0 - type: integer 
+	Parameter C_THRESH0_VALUE bound to: 1 - type: string 
+	Parameter C_CE_OVERRIDES_SYNC bound to: 0 - type: integer 
+	Parameter C_HAS_THRESH0 bound to: 0 - type: integer 
+	Parameter C_HAS_LOAD bound to: 0 - type: integer 
+	Parameter C_LOAD_LOW bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_FB_LATENCY bound to: 0 - type: integer 
+	Parameter C_AINIT_VAL bound to: 0 - type: string 
+	Parameter C_SINIT_VAL bound to: 0 - type: string 
+	Parameter C_SCLR_OVERRIDES_SSET bound to: 1 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'c_counter_binary_v12_0_14' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i2/hdl/c_counter_binary_v12_0_vh_rfs.vhd:2146' bound to instance 'U0' of component 'c_counter_binary_v12_0_14' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i1/synth/wave_generator_c_counter_binary_v12_0_i1.vhd:127]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator_c_counter_binary_v12_0_i1' (19#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i1/synth/wave_generator_c_counter_binary_v12_0_i1.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator_xlcounter_limit__parameterized0' (19#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:358]
+INFO: [Synth 8-638] synthesizing module 'sysgen_mux_18fd6948ac' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:148]
+INFO: [Synth 8-256] done synthesizing module 'sysgen_mux_18fd6948ac' (20#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'sysgen_mux_ef56c8c8d6' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'sysgen_mux_ef56c8c8d6' (21#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:210]
+INFO: [Synth 8-638] synthesizing module 'sysgen_relational_d106afb138' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:275]
+INFO: [Synth 8-256] done synthesizing module 'sysgen_relational_d106afb138' (22#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:275]
+INFO: [Synth 8-638] synthesizing module 'wave_generator_xlcounter_limit__parameterized1' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:358]
+	Parameter core_name0 bound to: wave_generator_c_counter_binary_v12_0_i0 - type: string 
+	Parameter op_width bound to: 16 - type: integer 
+	Parameter op_arith bound to: 1 - type: integer 
+	Parameter cnt_63_48 bound to: 0 - type: integer 
+	Parameter cnt_47_32 bound to: 0 - type: integer 
+	Parameter cnt_31_16 bound to: 0 - type: integer 
+	Parameter cnt_15_0 bound to: 32639 - type: integer 
+	Parameter count_limited bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'wave_generator_c_counter_binary_v12_0_i0' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i0/synth/wave_generator_c_counter_binary_v12_0_i0.vhd:59' bound to instance 'core_instance0' of component 'wave_generator_c_counter_binary_v12_0_i0' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:463]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator_xlcounter_limit__parameterized1' (22#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:358]
+INFO: [Synth 8-638] synthesizing module 'wave_generator_xlcounter_limit__parameterized2' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:358]
+	Parameter core_name0 bound to: wave_generator_c_counter_binary_v12_0_i2 - type: string 
+	Parameter op_width bound to: 16 - type: integer 
+	Parameter op_arith bound to: 1 - type: integer 
+	Parameter cnt_63_48 bound to: 0 - type: integer 
+	Parameter cnt_47_32 bound to: 0 - type: integer 
+	Parameter cnt_31_16 bound to: 0 - type: integer 
+	Parameter cnt_15_0 bound to: 0 - type: integer 
+	Parameter count_limited bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'wave_generator_c_counter_binary_v12_0_i2' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i2/synth/wave_generator_c_counter_binary_v12_0_i2.vhd:59' bound to instance 'core_instance2' of component 'wave_generator_c_counter_binary_v12_0_i2' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:483]
+INFO: [Synth 8-638] synthesizing module 'wave_generator_c_counter_binary_v12_0_i2' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i2/synth/wave_generator_c_counter_binary_v12_0_i2.vhd:68]
+	Parameter C_IMPLEMENTATION bound to: 0 - type: integer 
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_WIDTH bound to: 16 - type: integer 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_RESTRICT_COUNT bound to: 0 - type: integer 
+	Parameter C_COUNT_TO bound to: 1 - type: string 
+	Parameter C_COUNT_BY bound to: 100000001 - type: string 
+	Parameter C_COUNT_MODE bound to: 1 - type: integer 
+	Parameter C_THRESH0_VALUE bound to: 1 - type: string 
+	Parameter C_CE_OVERRIDES_SYNC bound to: 0 - type: integer 
+	Parameter C_HAS_THRESH0 bound to: 0 - type: integer 
+	Parameter C_HAS_LOAD bound to: 0 - type: integer 
+	Parameter C_LOAD_LOW bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_FB_LATENCY bound to: 0 - type: integer 
+	Parameter C_AINIT_VAL bound to: 0 - type: string 
+	Parameter C_SINIT_VAL bound to: 1111111111111111 - type: string 
+	Parameter C_SCLR_OVERRIDES_SSET bound to: 1 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'c_counter_binary_v12_0_14' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i2/hdl/c_counter_binary_v12_0_vh_rfs.vhd:2146' bound to instance 'U0' of component 'c_counter_binary_v12_0_14' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i2/synth/wave_generator_c_counter_binary_v12_0_i2.vhd:127]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator_c_counter_binary_v12_0_i2' (23#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i2/synth/wave_generator_c_counter_binary_v12_0_i2.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator_xlcounter_limit__parameterized2' (23#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:358]
+INFO: [Synth 8-638] synthesizing module 'wave_generator_xlcounter_limit__parameterized3' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:358]
+	Parameter core_name0 bound to: wave_generator_c_counter_binary_v12_0_i0 - type: string 
+	Parameter op_width bound to: 16 - type: integer 
+	Parameter op_arith bound to: 1 - type: integer 
+	Parameter cnt_63_48 bound to: 0 - type: integer 
+	Parameter cnt_47_32 bound to: 0 - type: integer 
+	Parameter cnt_31_16 bound to: 0 - type: integer 
+	Parameter cnt_15_0 bound to: 65535 - type: integer 
+	Parameter count_limited bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'wave_generator_c_counter_binary_v12_0_i0' declared at 'c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/wave_generator_c_counter_binary_v12_0_i0/synth/wave_generator_c_counter_binary_v12_0_i0.vhd:59' bound to instance 'core_instance0' of component 'wave_generator_c_counter_binary_v12_0_i0' [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:463]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator_xlcounter_limit__parameterized3' (23#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator_entity_declarations.vhd:358]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator_struct' (24#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'wave_generator' (25#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/xil_defaultlib/hdl/wave_generator.vhd:294]
+INFO: [Synth 8-256] done synthesizing module 'WAVE_GEN' (26#1) [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/synth/WAVE_GEN.vhd:73]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1461.273 ; gain = 312.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1461.273 ; gain = 312.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1461.273 ; gain = 312.594
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1461.273 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 127 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/constrs/wave_generator.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/constrs/wave_generator.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/WAVE_GEN_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/WAVE_GEN_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1562.781 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1566.938 ; gain = 4.156
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z045ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/WAVE_GEN_synth_1/dont_touch.xdc, line 18).
+Applied set_property DONT_TOUCH = true for U0/wave_generator_struct/signal_1_counter/\comp2.core_instance2 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/wave_generator_struct/counter1/\comp1.core_instance1 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/wave_generator_struct/counter/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/wave_generator_struct/sel_counter/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/wave_generator_struct/signal_2_counter/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'U0/wave_generator_struct/constant2' (sysgen_constant_fa580fbff1) to 'U0/wave_generator_struct/constant8'
+INFO: [Synth 8-223] decloning instance 'U0/wave_generator_struct/constant3' (sysgen_constant_f06621f9ed) to 'U0/wave_generator_struct/constant5'
+INFO: [Synth 8-223] decloning instance 'U0/wave_generator_struct/constant6' (sysgen_constant_a02dbc4402) to 'U0/wave_generator_struct/constant9'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 900 (col length:140)
+BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |    21|
+|2     |LUT3  |     2|
+|3     |LUT4  |     7|
+|4     |LUT5  |     4|
+|5     |LUT6  |     6|
+|6     |MUXCY |    61|
+|7     |XORCY |    66|
+|8     |FDRE  |    55|
+|9     |FDSE  |    16|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1566.938 ; gain = 418.258
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1566.938 ; gain = 312.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1566.938 ; gain = 418.258
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1566.938 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 127 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1591.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 17 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+80 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:48 . Memory (MB): peak = 1591.586 ; gain = 510.914
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/WAVE_GEN_synth_1/WAVE_GEN.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP WAVE_GEN, cache-ID = 000742aaae67cc6e
+INFO: [Coretcl 2-1174] Renamed 51 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/WAVE_GEN_synth_1/WAVE_GEN.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file WAVE_GEN_utilization_synth.rpt -pb WAVE_GEN_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 18 10:33:38 2021...

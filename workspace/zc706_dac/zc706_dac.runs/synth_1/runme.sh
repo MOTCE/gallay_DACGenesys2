@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ddr_main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ddr_main.tcl
+EAStep vivado -log dac_toplevel.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dac_toplevel.tcl
