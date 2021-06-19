@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1624028733">
+<GenRun Id="synth_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1624114463">
   <File Type="PA-TCL" Name="dac_toplevel.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="dac_toplevel_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="dac_toplevel_reports.tcl"/>
   <File Type="RDS-RDS" Name="dac_toplevel.vds"/>
-  <File Type="RDS-UTIL" Name="dac_toplevel_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="dac_toplevel_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="dac_toplevel.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="dac_toplevel_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="dac_toplevel_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/dac3484_interface_module.vhd">
@@ -62,10 +57,10 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="WAVE_GEN"/>
+  <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="sine_gen_16bits"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
 </GenRun>

@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Jun 18 11:05:41 2021
-# Process ID: 11348
+# Start of session at: Sat Jun 19 10:54:41 2021
+# Process ID: 9612
 # Current directory: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1
 # Command line: vivado.exe -log dac_toplevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dac_toplevel.tcl
 # Log file: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/dac_toplevel.vds
@@ -11,7 +11,7 @@
 #-----------------------------------------------------------
 source dac_toplevel.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Projet/Desktop/Recherche/custom_ips'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Projet/Desktop/Recherche/custom_ips/sine_generator_16bits/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.cache/ip 
@@ -22,12 +22,20 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045
 INFO: [Device 21-403] Loading part xc7z045ffg900-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11484
+INFO: [Synth 8-7075] Helper process launched with PID 14196
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1390.930 ; gain = 243.219
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1394.719 ; gain = 243.004
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'dac_toplevel' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:52]
-INFO: [Synth 8-3491] module 'dac3484_interface_module' declared at 'C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac3484_interface_module.vhd:19' bound to instance 'DAC_INTERFACE' of component 'dac3484_interface_module' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'dac_toplevel' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:56]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'IBUFDS_clk' to cell 'IBUFDS' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:159]
+INFO: [Synth 8-3491] module 'dac3484_interface_module' declared at 'C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac3484_interface_module.vhd:19' bound to instance 'DAC_INTERFACE' of component 'dac3484_interface_module' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:167]
 INFO: [Synth 8-638] synthesizing module 'dac3484_interface_module' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac3484_interface_module.vhd:59]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: 0 - type: bool 
@@ -222,62 +230,73 @@ INFO: [Synth 8-113] binding component instance 'ODDR_inst' to cell 'ODDR' [C:/Us
 	Parameter SRTYPE bound to: SYNC - type: string 
 INFO: [Synth 8-113] binding component instance 'ODDR_inst' to cell 'ODDR' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac3484_interface_module.vhd:114]
 INFO: [Synth 8-256] done synthesizing module 'dac3484_interface_module' (1#1) [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac3484_interface_module.vhd:59]
-INFO: [Synth 8-3491] module 'WAVE_GEN' declared at 'C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/.Xil/Vivado-11348-DESKTOP-J3N7B01/realtime/WAVE_GEN_stub.v:6' bound to instance 'WAVE_GENERATOR' of component 'WAVE_GEN' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:128]
-INFO: [Synth 8-6157] synthesizing module 'WAVE_GEN' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/.Xil/Vivado-11348-DESKTOP-J3N7B01/realtime/WAVE_GEN_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'WAVE_GEN' (2#1) [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/.Xil/Vivado-11348-DESKTOP-J3N7B01/realtime/WAVE_GEN_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'dac_toplevel' (3#1) [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:52]
+INFO: [Synth 8-3491] module 'fifo_generator_0' declared at 'C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/.Xil/Vivado-9612-DESKTOP-J3N7B01/realtime/fifo_generator_0_stub.vhdl:5' bound to instance 'SYNC_FIFO' of component 'fifo_generator_0' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:189]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/.Xil/Vivado-9612-DESKTOP-J3N7B01/realtime/fifo_generator_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/.Xil/Vivado-9612-DESKTOP-J3N7B01/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'CLOCK_GEN' of component 'clk_wiz_0' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:230]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/.Xil/Vivado-9612-DESKTOP-J3N7B01/realtime/clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'sine_gen_16bits' declared at 'C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/.Xil/Vivado-9612-DESKTOP-J3N7B01/realtime/sine_gen_16bits_stub.vhdl:5' bound to instance 'SINE_GEN' of component 'sine_gen_16bits' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:241]
+INFO: [Synth 8-638] synthesizing module 'sine_gen_16bits' [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/.Xil/Vivado-9612-DESKTOP-J3N7B01/realtime/sine_gen_16bits_stub.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'dac_toplevel' (2#1) [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/new/dac_toplevel.vhd:56]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.641 ; gain = 297.930
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1449.375 ; gain = 297.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.641 ; gain = 297.930
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1467.293 ; gain = 315.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1445.641 ; gain = 297.930
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1467.293 ; gain = 315.578
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1445.641 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1479.328 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/WAVE_GEN/WAVE_GEN_in_context.xdc] for cell 'WAVE_GENERATOR'
-Finished Parsing XDC File [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/WAVE_GEN/WAVE_GEN_in_context.xdc] for cell 'WAVE_GENERATOR'
+Parsing XDC File [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'SYNC_FIFO'
+Finished Parsing XDC File [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'SYNC_FIFO'
+Parsing XDC File [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/clk_wiz_0_2/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'CLOCK_GEN'
+WARNING: [Vivado 12-584] No ports matched ''. [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/clk_wiz_0_2/clk_wiz_0/clk_wiz_0_in_context.xdc:1]
+WARNING: [Vivado 12-584] No ports matched ''. [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/clk_wiz_0_2/clk_wiz_0/clk_wiz_0_in_context.xdc:4]
+Finished Parsing XDC File [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/clk_wiz_0_2/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'CLOCK_GEN'
+Parsing XDC File [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/sine_gen_16bits/sine_gen_16bits/sine_gen_16bits_in_context.xdc] for cell 'SINE_GEN'
+Finished Parsing XDC File [c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/sine_gen_16bits/sine_gen_16bits/sine_gen_16bits_in_context.xdc] for cell 'SINE_GEN'
 Parsing XDC File [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/constrs_1/new/constr.xdc]
 Finished Parsing XDC File [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/constrs_1/new/constr.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/constrs_1/new/constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dac_toplevel_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/dac_toplevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1546.418 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1595.145 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 18 instances were transformed.
   OBUFDS => OBUFDS: 18 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1546.418 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1595.145 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1546.418 ; gain = 398.707
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z045ffg900-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1546.418 ; gain = 398.707
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for WAVE_GENERATOR. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for SYNC_FIFO. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for CLOCK_GEN. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for SINE_GEN. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1546.418 ; gain = 398.707
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1546.418 ; gain = 398.707
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -285,9 +304,12 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Registers : 
 	               16 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input   16 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -304,25 +326,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1546.418 ; gain = 398.707
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1546.418 ; gain = 398.707
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1546.418 ; gain = 398.707
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1554.887 ; gain = 407.176
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -339,87 +361,94 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module SYNC_FIFO has unconnected pin wr_clk
+CRITICAL WARNING: [Synth 8-4442] BlackBox module SYNC_FIFO has unconnected pin rd_clk
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1560.648 ; gain = 412.938
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1560.648 ; gain = 412.938
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1560.648 ; gain = 412.938
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1560.648 ; gain = 412.938
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1560.648 ; gain = 412.938
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1560.648 ; gain = 412.938
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+--------------+----------+
-|      |BlackBox name |Instances |
-+------+--------------+----------+
-|1     |WAVE_GEN      |         1|
-+------+--------------+----------+
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |fifo_generator_0 |         1|
+|2     |clk_wiz_0        |         1|
+|3     |sine_gen_16bits  |         1|
++------+-----------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |WAVE_GEN |     1|
-|2     |BUFG     |     1|
-|3     |LUT1     |     2|
-|4     |LUT3     |    32|
-|5     |ODDR     |    16|
-|6     |FDRE     |    34|
-|7     |IBUFDS   |     1|
-|8     |OBUF     |     1|
-|9     |OBUFDS   |    18|
-+------+---------+------+
++------+----------------------+------+
+|      |Cell                  |Count |
++------+----------------------+------+
+|1     |clk_wiz_0_bbox        |     1|
+|2     |fifo_generator_0_bbox |     1|
+|3     |sine_gen_16bits_bbox  |     1|
+|4     |BUFG                  |     1|
+|5     |LUT1                  |     2|
+|6     |LUT3                  |     1|
+|7     |LUT4                  |     1|
+|8     |ODDR                  |    16|
+|9     |FDRE                  |    20|
+|10    |IBUFDS                |     2|
+|11    |OBUF                  |     1|
+|12    |OBUFDS                |    18|
++------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1560.648 ; gain = 412.938
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1595.145 ; gain = 443.430
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1560.648 ; gain = 312.160
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1560.648 ; gain = 412.938
+Synthesis finished with 0 errors, 2 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1595.145 ; gain = 315.578
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1595.145 ; gain = 443.430
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1560.648 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1595.145 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1582.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1597.672 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 18 instances were transformed.
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 18 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-63 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+67 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1582.164 ; gain = 503.789
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 1597.672 ; gain = 523.555
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/dac_toplevel.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file dac_toplevel_utilization_synth.rpt -pb dac_toplevel_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 18 11:06:32 2021...
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 19 10:55:36 2021...

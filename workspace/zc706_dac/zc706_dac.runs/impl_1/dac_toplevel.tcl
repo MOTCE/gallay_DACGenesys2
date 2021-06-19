@@ -132,7 +132,7 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.cache/wt [current_project]
   set_property parent.project_path C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.xpr [current_project]
-  set_property ip_repo_paths C:/Users/Projet/Desktop/Recherche/custom_ips [current_project]
+  set_property ip_repo_paths C:/Users/Projet/Desktop/Recherche/custom_ips/sine_generator_16bits/ip [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
@@ -140,7 +140,9 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.runs/synth_1/dac_toplevel.dcp
-  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/WAVE_GEN/WAVE_GEN.xci
+  read_ip -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/clk_wiz_0_2/clk_wiz_0.xci
+  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/sine_gen_16bits/sine_gen_16bits.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/constrs_1/new/constr.xdc
 OPTRACE "read constraints: implementation" END { }

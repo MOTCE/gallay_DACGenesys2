@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Jun 19 12:44:39 2021
+# Process ID: 13444
+# Current directory: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/sine_gen_16bits_synth_1
+# Command line: vivado.exe -log sine_gen_16bits.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sine_gen_16bits.tcl
+# Log file: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/sine_gen_16bits_synth_1/sine_gen_16bits.vds
+# Journal file: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/sine_gen_16bits_synth_1\vivado.jou
+#-----------------------------------------------------------
+source sine_gen_16bits.tcl -notrace

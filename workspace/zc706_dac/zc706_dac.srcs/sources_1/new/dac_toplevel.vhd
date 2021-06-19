@@ -45,11 +45,18 @@ entity dac_toplevel is
     sync_p: OUT STD_LOGIC;
     
     -- Single ended clock output that drives the FGPA and wave source, for verification purposes
-    single_clk_out : OUT STD_LOGIC
+    single_clk_out : OUT STD_LOGIC;
+    
+    -- ZC706 onboard clock generator (200MHz) signal
+    internal_clk_p : IN STD_LOGIC;
+    internal_clk_n : IN STD_LOGIC
   );
 end dac_toplevel;
 
-architecture Behavioral of dac_toplevel is
+architecture Behavioral of dac_topll is
+
+signal dac_buffer_1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal dac_buffer_1_we : STD_LOGIC;
 
 signal signal_1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal signal_2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -73,6 +80,25 @@ signal empty : STD_LOGIC;
 signal full : STD_LOGIC;
 signal wr_en : STD_LOGIC;
 signal rd_en : STD_LOGIC;
+
+signal fifo_rst : STD_LOGIC;
+
+-- STATE MACHINE
+signal STATE : Integer range 0 to 2 := 0;
+constant IDLE_STATE : Integer := 0;
+constant NOT_EMPTY_STATE : Integer := 1;
+constant RD_ENABLE_STATE : Integer := 2;
+
+-- CLOCK GENERATOR SIGNALS
+-- 320MHz signal
+signal clk_gen_out : STD_LOGIC;
+signal clk_gen_reset : STD_LOGIC := '0';
+signal clk_gen_locked : STD_LOGIC;
+
+-- Internal CLOCK single ended signal
+signal internal_clk : STD_LOGIC;
+
+signal sine_gen_out : STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 -- See dac3484_interface_module.vhd for informations about ports
 component dac3484_interface_module
@@ -111,7 +137,35 @@ component fifo_generator_0
   );
 end component;
 
+component clk_wiz_0
+port
+ (-- Clock in ports
+  -- Clock out ports
+  clk_out1          : out    std_logic;
+  -- Status and control signals
+  reset             : in     std_logic;
+  locked            : out    std_logic;
+  clk_in1           : in     std_logic
+ );
+end component;
+
+COMPONENT sine_gen_16bits
+  PORT (
+    clk : IN STD_LOGIC;
+    gateway_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+  );
+END COMPONENT;
+
 begin
+
+    -- IBUFDS to transform LVDS (differential) clock to single ended clock.
+    -- LVDS clock is received as an input from internal clock source (200MHz)
+    IBUFDS_clk : IBUFDS
+    port map (
+        O => internal_clk,
+        I => internal_clk_p,
+        IB => internal_clk_n
+    );
     
     -- DAC interface module instantiation, see VHD file for more informations.
     DAC_INTERFACE : dac3484_interface_module
@@ -138,7 +192,7 @@ begin
     -- Synchronization FIFO with independant RD_EN and WR_EN clocks
     SYNC_FIFO : fifo_generator_0
     PORT MAP (
-        rst => '0',
+        rst => fifo_rst,
         wr_clk => wr_clk,
         rd_clk => rd_clk,
         din => din,
@@ -149,12 +203,64 @@ begin
         empty => empty
     );
     
-    single_clk_out <= single_clk;
     signal_1 <= dout;
     
-    STATE : 
-    process
+    STATE_PROCESS : 
+    process(single_clk)
+    begin
+        if rising_edge(single_clk) then
+            case STATE is
+                when IDLE_STATE =>
+                    if empty = '1' then
+                        STATE <= IDLE_STATE;
+                        rd_en <= '0';
+                    else
+                        STATE <= NOT_EMPTY_STATE;
+                        rd_en <= '1';
+                    end if;
+                when NOT_EMPTY_STATE =>
+                    STATE <= RD_ENABLE_STATE;
+                    rd_en <= '0';
+                    dac_buffer_1_we <= '1';
+                when RD_ENABLE_STATE =>
+                    STATE <= IDLE_STATE;
+                    dac_buffer_1_we <= '0';
+            end case; 
+        end if;
+    end process;
+   
+    -- CLOCK GENERATOR INSTANTIATION
+    -- It takes a 200MHz input signal from onboard clock (ZC706) and produces a 320MHz signal
+    CLOCK_GEN : clk_wiz_0
+    port map ( 
+        -- Clock out ports         
+        clk_out1 => clk_gen_out,
+        -- Status and control signals                
+        reset => clk_gen_reset,
+        locked => clk_gen_locked,
+        -- Clock in ports
+        clk_in1 => internal_clk
+    );
     
+    SINE_GEN : sine_gen_16bits
+    PORT MAP (
+        clk => clk_gen_out,
+        gateway_out => sine_gen_out
+    );
     
+--    -- TODO: Add Reset signal
+--    DAC_BUFFER_1_PROCESS :
+--    process(single_clk)
+--    begin
+--        if rising_edge(single_clk) then
+--            if dac_buffer_1_we = '1' then
+--                dac_buffer_1 <= dout;
+--            end if;
+--        end if;
+--    end process;
 
+    wr_en <= not(full);
+    single_clk_out <= single_clk;
+    -- signal_1 <= dout;
+    
 end Behavioral;

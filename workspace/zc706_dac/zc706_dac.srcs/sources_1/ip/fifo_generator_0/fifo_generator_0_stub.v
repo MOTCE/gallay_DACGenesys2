@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Fri Jun 18 15:32:53 2021
+// Date        : Sat Jun 19 10:50:16 2021
 // Host        : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/zc706_dac/zc706_dac.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top fifo_generator_0 -prefix
+//               fifo_generator_0_ fifo_generator_0_stub.v
 // Design      : fifo_generator_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z045ffg900-2

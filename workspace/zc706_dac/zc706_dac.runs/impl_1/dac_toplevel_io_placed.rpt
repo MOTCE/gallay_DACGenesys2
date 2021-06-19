@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date                      : Fri Jun 18 11:07:39 2021
+| Date                      : Sat Jun 19 10:56:47 2021
 | Host                      : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
 | Command                   : report_io -file dac_toplevel_io_placed.rpt
 | Design                    : dac_toplevel
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            39 |
+|            41 |
 +---------------+
 
 
@@ -523,7 +523,7 @@ Table of Contents
 | G6         |                | High Performance | IO_L8N_T1_33            | User IO       |             |      33 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
 | G7         |                | High Performance | IO_L18N_T2_34           | User IO       |             |      34 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
 | G8         |                | High Performance | VCCO_34                 | VCCO          |             |      34 |            |      |                     |                      | 0.00-1.80 |            |           |          |      |                  |              |                   |              |
-| G9         |                | High Performance | IO_L13N_T2_MRCC_34      | User IO       |             |      34 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
+| G9         | internal_clk_n | High Performance | IO_L13N_T2_MRCC_34      | INPUT         | LVDS        |      34 |            |      |                     |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | G10        |                | High Performance | IO_L11P_T1_SRCC_34      | User IO       |             |      34 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
 | G11        |                | High Performance | IO_L9N_T1_DQS_34        | User IO       |             |      34 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
 | G12        |                | High Performance | IO_L9P_T1_DQS_AD3P_35   | User IO       |             |      35 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
@@ -553,7 +553,7 @@ Table of Contents
 | H6         |                | High Performance | IO_L8P_T1_33            | User IO       |             |      33 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
 | H7         |                | High Performance | IO_L18P_T2_34           | User IO       |             |      34 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
 | H8         |                | High Performance | IO_L15N_T2_DQS_34       | User IO       |             |      34 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
-| H9         |                | High Performance | IO_L13P_T2_MRCC_34      | User IO       |             |      34 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
+| H9         | internal_clk_p | High Performance | IO_L13P_T2_MRCC_34      | INPUT         | LVDS        |      34 |            |      |                     |                 NONE |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | H10        |                |                  | GND                     | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | H11        |                | High Performance | IO_L7N_T1_34            | User IO       |             |      34 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
 | H12        |                | High Performance | IO_L9P_T1_DQS_34        | User IO       |             |      34 |            |      |                     |                      |           |            |           |          |      |                  |              |                   |              |
