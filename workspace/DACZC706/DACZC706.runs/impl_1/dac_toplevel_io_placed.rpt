@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date                      : Sat Jun 19 17:05:21 2021
+| Date                      : Mon Jun 21 09:48:11 2021
 | Host                      : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
 | Command                   : report_io -file dac_toplevel_io_placed.rpt
 | Design                    : dac_toplevel

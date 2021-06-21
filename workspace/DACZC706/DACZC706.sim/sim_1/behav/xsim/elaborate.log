@@ -1,8 +1,22 @@
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 2367e94432d44442b06eda803761d27e --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_5 -L xil_defaultlib -L xbip_utils_v3_0_10 -L c_reg_fd_v12_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_6 -L xbip_dsp48_addsub_v3_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L c_gate_bit_v12_0_6 -L xbip_counter_v3_0_6 -L c_counter_binary_v12_0_14 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_test_behav xil_defaultlib.fifo_test xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 2367e94432d44442b06eda803761d27e --incr --debug typical --relax --mt 2 -L fifo_generator_v13_2_5 -L xil_defaultlib -L xbip_utils_v3_0_10 -L c_reg_fd_v12_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_6 -L xbip_dsp48_addsub_v3_0_6 -L xbip_addsub_v3_0_6 -L c_addsub_v12_0_14 -L c_gate_bit_v12_0_6 -L xbip_counter_v3_0_6 -L c_counter_binary_v12_0_14 -L dist_mem_gen_v8_0_13 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fifo_test_behav xil_defaultlib.fifo_test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_sync_stag...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_bhv_ver_a...
+Compiling module fifo_generator_v13_2_5.fifo_generator_v13_2_5_CONV_VER(...
+Compiling module fifo_generator_v13_2_5.fifo_generator_vlog_beh(C_DATA_C...
+Compiling module xil_defaultlib.fifo_generator_0
+Compiling architecture behavioral of entity xil_defaultlib.fifo_test
+Built simulation snapshot fifo_test_behav

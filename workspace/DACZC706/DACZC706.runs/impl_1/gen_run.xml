@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1624136350">
+<GenRun Id="impl_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1624282936">
   <File Type="BITSTR-BMM" Name="dac_toplevel_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="dac_toplevel_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="dac_toplevel_timing_summary_init.rpt"/>
@@ -89,13 +89,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/fifo_test.vhd">
+    <File Path="$PSRCDIR/sources_1/ip/model_0/model_dist_mem_gen_i0_vivado.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/model_0/model_dist_mem_gen_i0_vivado.coe">
+    <File Path="$PSRCDIR/sources_1/ip/fpga_dmm_0/fpga_dmm_dist_mem_gen_i0_vivado.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -143,5 +143,7 @@
   <BlockFileSet Type="BlockSrcs" Name="fifo_generator_0"/>
   <BlockFileSet Type="BlockSrcs" Name="sine_gen_16bits"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="fpga_dmm_0"/>
   <BlockFileSet Type="BlockSrcs" Name="model_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="builtin_fifo"/>
 </GenRun>

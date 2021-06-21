@@ -87,6 +87,7 @@ signal fifo_rst : STD_LOGIC;
 signal STATE : Integer range 0 to 2 := 0;
 constant IDLE_STATE : Integer := 0;
 constant NOT_EMPTY_STATE : Integer := 1;
+constant DELAY_STATE: Integer := 2;
 constant RD_ENABLE_STATE : Integer := 2;
 
 -- CLOCK GENERATOR SIGNALS
@@ -107,9 +108,16 @@ signal gateway_out2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal gateway_out4 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal gateway_out5 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 
-signal previous_gateway_out1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal model_out_1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal model_out_2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal model_out_3 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal model_out_4 : STD_LOGIC_VECTOR(15 DOWNTO 0);
 
-signal gateway_out1_changed : STD_LOGIC := '0';
+signal model_out_1_enable : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal model_out_2_enable : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal model_out_3_enable : STD_LOGIC_VECTOR(0 DOWNTO 0);
+signal model_out_4_enable : STD_LOGIC_VECTOR(0 DOWNTO 0);
+
 
 -- See dac3484_interface_module.vhd for informations about ports
 component dac3484_interface_module
@@ -177,6 +185,34 @@ COMPONENT model_0
   );
 END COMPONENT;
 
+COMPONENT builtin_fifo
+  PORT (
+    rst : IN STD_LOGIC;
+    wr_clk : IN STD_LOGIC;
+    rd_clk : IN STD_LOGIC;
+    din : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    wr_en : IN STD_LOGIC;
+    rd_en : IN STD_LOGIC;
+    dout : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    full : OUT STD_LOGIC;
+    empty : OUT STD_LOGIC
+  );
+END COMPONENT;
+
+COMPONENT fpga_dmm_0
+  PORT (
+    clk : IN STD_LOGIC;
+    secondoutput : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    thirdoutput : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    secondoutputenable : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    fourthoutput : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    firstoutput : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    thirdoutputenable : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    firstoutputenable : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
+    fourthoutputenable : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+  );
+END COMPONENT;
+
 begin
 
     -- IBUFDS to transform LVDS (differential) clock to single ended clock.
@@ -211,8 +247,21 @@ begin
     );
     
     -- Synchronization FIFO with independant RD_EN and WR_EN clocks
-    SYNC_FIFO : fifo_generator_0
-    PORT MAP (
+--    SYNC_FIFO : fifo_generator_0
+--    PORT MAP (
+--        rst => fifo_rst,
+--        wr_clk => wr_clk,
+--        rd_clk => rd_clk,
+--        din => din,
+--        wr_en => wr_en,
+--        rd_en => rd_en,
+--        dout => dout,
+--        full => full,
+--        empty => empty
+--    );
+    
+    builtin : builtin_fifo
+      PORT MAP (
         rst => fifo_rst,
         wr_clk => wr_clk,
         rd_clk => rd_clk,
@@ -222,17 +271,17 @@ begin
         dout => dout,
         full => full,
         empty => empty
-    );
+      );
     
     -- SYSTEM GENERATOR INSTANTIATION
-    MODEL_GEN : model_0
-    PORT MAP (
-        clk => clk_gen_out,
-        gateway_out1 => gateway_out1,
-        gateway_out2 => gateway_out2,
-        gateway_out4 => gateway_out4,
-        gateway_out5 => gateway_out5
-    );
+--    MODEL_GEN : model_0
+--    PORT MAP (
+--        clk => clk_gen_out,
+--        gateway_out1 => gateway_out1,
+--        gateway_out2 => gateway_out2,
+--        gateway_out4 => gateway_out4,
+--        gateway_out5 => gateway_out5
+--    );
    
     -- CLOCK GENERATOR INSTANTIATION
     -- It takes a 200MHz input signal from onboard clock (ZC706) and produces a 320MHz signal
@@ -251,6 +300,19 @@ begin
     PORT MAP (
         clk => clk_gen_out,
         gateway_out => sine_gen_out
+    );
+    
+    FPGA_DMM : fpga_dmm_0
+    PORT MAP (
+        clk => clk_gen_out,
+        secondoutput => model_out_2,
+        thirdoutput => model_out_3,
+        secondoutputenable => model_out_2_enable,
+        fourthoutput => model_out_4,
+        firstoutput => model_out_1,
+        thirdoutputenable => model_out_3_enable,
+        firstoutputenable => model_out_1_enable,
+        fourthoutputenable => model_out_4_enable
     );
     
     -- TODO: Add Reset signal
@@ -288,22 +350,9 @@ begin
         end if;
     end process;
     
-    MODEL_OUTPUT_CHANGE_PROCESS :
-    process(clk_gen_out, gateway_out1)
-    begin
-        if rising_edge(clk_gen_out) then
-            if previous_gateway_out1 /= gateway_out1 then
-                previous_gateway_out1 <= gateway_out1;
-                gateway_out1_changed <= '1';
-            else
-                gateway_out1_changed <= '0';
-            end if;
-        end if;
-    end process;
+    din <= model_out_4;
     
-    din <= gateway_out1;
-    
-    wr_en <= gateway_out1_changed and not(full);
+    wr_en <= model_out_4_enable(0) and not(full);
     wr_clk <= clk_gen_out;
     
     rd_clk <= single_clk;

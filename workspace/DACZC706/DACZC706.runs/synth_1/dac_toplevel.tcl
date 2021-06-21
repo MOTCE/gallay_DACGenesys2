@@ -72,7 +72,6 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 1
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z045ffg900-2
 
@@ -89,6 +88,7 @@ set_property board_part_repo_paths {C:/Users/Projet/AppData/Roaming/Xilinx/Vivad
 set_property board_part xilinx.com:zc706:part0:1.4 [current_project]
 set_property ip_repo_paths {
   c:/Users/Projet/Desktop/Recherche/custom_ips/sine_generator_16bits/ip
+  c:/Users/Projet/Desktop/Recherche/custom_ips/hossein_design_enable
   c:/Users/Projet/Desktop/Recherche/custom_ips/hossein_design/ip
 } [current_project]
 update_ip_catalog
@@ -96,11 +96,11 @@ set_property ip_output_repo c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/model_0/model_dist_mem_gen_i0_vivado.coe
+add_files C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/model_0/model_dist_mem_gen_i0_vivado.coe
+add_files c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fpga_dmm_0/fpga_dmm_dist_mem_gen_i0_vivado.coe
 read_vhdl -library xil_defaultlib {
   C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/new/dac3484_interface_module.vhd
   C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/new/dac_toplevel.vhd
-  C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/new/fifo_test.vhd
 }
 read_ip -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xdc]
@@ -115,9 +115,18 @@ set_property used_in_implementation false [get_files -all c:/Users/Projet/Deskto
 read_ip -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/sine_gen_16bits/sine_gen_16bits.xci
 set_property used_in_implementation false [get_files -all c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/sine_gen_16bits/constrs/sine_generator_16bits.xdc]
 
-read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/model_0/model_0.xci
+read_ip -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/model_0/model_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/model_0/model_dist_mem_gen_i0/model_dist_mem_gen_i0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/model_0/constrs/model.xdc]
+
+read_ip -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/builtin_fifo/builtin_fifo.xci
+set_property used_in_implementation false [get_files -all c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/builtin_fifo/builtin_fifo.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/builtin_fifo/builtin_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/builtin_fifo/builtin_fifo_ooc.xdc]
+
+read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fpga_dmm_0/fpga_dmm_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fpga_dmm_0/fpga_dmm_dist_mem_gen_i0/fpga_dmm_dist_mem_gen_i0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fpga_dmm_0/constrs/fpga_dmm.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

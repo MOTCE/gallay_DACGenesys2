@@ -12,6 +12,17 @@ vhdl xil_defaultlib  \
 "../../../../DACZC706.ip_user_files/ipstatic/xil_defaultlib/hdl/sine_generator_16bits_entity_declarations.vhd" \
 "../../../../DACZC706.ip_user_files/ipstatic/xil_defaultlib/hdl/sine_generator_16bits.vhd" \
 "../../../../DACZC706.srcs/sources_1/ip/sine_gen_16bits/sim/sine_gen_16bits.vhd" \
+"../../../../DACZC706.srcs/sources_1/ip/model_0/model_c_addsub_v12_0_i0/sim/model_c_addsub_v12_0_i0.vhd" \
+"../../../../DACZC706.srcs/sources_1/ip/model_0/model_c_addsub_v12_0_i1/sim/model_c_addsub_v12_0_i1.vhd" \
+"../../../../DACZC706.srcs/sources_1/ip/model_0/model_c_addsub_v12_0_i2/sim/model_c_addsub_v12_0_i2.vhd" \
+"../../../../DACZC706.srcs/sources_1/ip/model_0/model_c_addsub_v12_0_i3/sim/model_c_addsub_v12_0_i3.vhd" \
+"../../../../DACZC706.srcs/sources_1/ip/model_0/model_c_addsub_v12_0_i4/sim/model_c_addsub_v12_0_i4.vhd" \
+"../../../../DACZC706.srcs/sources_1/ip/model_0/model_c_counter_binary_v12_0_i0/sim/model_c_counter_binary_v12_0_i0.vhd" \
+"../../../../DACZC706.srcs/sources_1/ip/model_0/model_c_counter_binary_v12_0_i1/sim/model_c_counter_binary_v12_0_i1.vhd" \
+"../../../../DACZC706.srcs/sources_1/ip/model_0/model_mult_gen_v12_0_i0/sim/model_mult_gen_v12_0_i0.vhd" \
+"../../../../DACZC706.ip_user_files/ipstatic/xil_defaultlib/hdl/model_entity_declarations.vhd" \
+"../../../../DACZC706.ip_user_files/ipstatic/xil_defaultlib/hdl/model.vhd" \
+"../../../../DACZC706.srcs/sources_1/ip/model_0/sim/model_0.vhd" \
 "../../../../DACZC706.srcs/sources_1/new/dac3484_interface_module.vhd" \
 "../../../../DACZC706.srcs/sources_1/new/dac_toplevel.vhd" \
 "../../../../DACZC706.srcs/sources_1/new/fifo_test.vhd" \

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Jun 20 13:59:38 2021
+# Process ID: 6556
+# Current directory: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/builtin_fifo_synth_1
+# Command line: vivado.exe -log builtin_fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source builtin_fifo.tcl
+# Log file: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/builtin_fifo_synth_1/builtin_fifo.vds
+# Journal file: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/builtin_fifo_synth_1\vivado.jou
+#-----------------------------------------------------------
+source builtin_fifo.tcl -notrace
