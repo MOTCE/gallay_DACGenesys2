@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Jun 21 09:43:19 2021
-# Process ID: 10448
+# Start of session at: Wed Jun 23 16:53:02 2021
+# Process ID: 11312
 # Current directory: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/impl_1
 # Command line: vivado.exe -log dac_toplevel.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source dac_toplevel.tcl -notrace
 # Log file: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/impl_1/dac_toplevel.vdi

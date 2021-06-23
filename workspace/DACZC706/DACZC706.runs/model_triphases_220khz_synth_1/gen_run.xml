@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="model_triphases_220khz_synth_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1624479778">
+  <File Type="PA-TCL" Name="model_triphases_220khz.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="model_triphases_220khz_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="model_triphases_220khz_reports.tcl"/>
+  <File Type="RDS-RDS" Name="model_triphases_220khz.vds"/>
+  <File Type="RDS-UTIL" Name="model_triphases_220khz_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="model_triphases_220khz_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="model_triphases_220khz.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="model_triphases_220khz_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="model_triphases_220khz_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/model_triphases_220khz">
+    <File Path="$PSRCDIR/sources_1/ip/model_triphases_220khz/model_triphases_220khz.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="model_triphases_220khz"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/model_triphases_220khz">
+    <File Path="$PSRCDIR/sources_1/ip/model_triphases_220khz/model_triphases_220khz.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="model_triphases_220khz"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

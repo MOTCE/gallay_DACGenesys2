@@ -135,8 +135,13 @@ OPTRACE "set parameters" START { }
   set_property parent.project_path C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.xpr [current_project]
   set_property ip_repo_paths {
   c:/Users/Projet/Desktop/Recherche/custom_ips/sine_generator_16bits/ip
-  C:/Users/Projet/Desktop/Recherche/custom_ips/hossein_design_enable
-  c:/Users/Projet/Desktop/Recherche/custom_ips/hossein_design/ip
+  c:/Users/Projet/Desktop/Recherche/custom_ips/hossein_design_itp
+  c:/Users/Projet/Desktop/Recherche/custom_ips/hossein_design_itp_phaseA
+  c:/Users/Projet/Desktop/Recherche/custom_ips/example_ip
+  c:/Users/Projet/Desktop/Recherche/custom_ips/hossein_design_itp_phaseA_v2
+  c:/Users/Projet/Desktop/Recherche/custom_ips/hossein_design_itp_3phases_200khz
+  c:/Users/Projet/Desktop/Recherche/custom_ips/hossein_design_itp_3phases_220khz
+  C:/Users/Projet/Desktop/Recherche/custom_ips/hossein_second_case
 } [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.cache/ip [current_project]
@@ -148,9 +153,14 @@ OPTRACE "add files" START { }
   read_ip -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
   read_ip -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/sine_gen_16bits/sine_gen_16bits.xci
-  read_ip -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/model_0/model_0.xci
   read_ip -quiet C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/builtin_fifo/builtin_fifo.xci
-  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fpga_dmm_0/fpga_dmm_0.xci
+  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fpga_model_0/fpga_model_0.xci
+  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fpga_model_phaseA/fpga_model_phaseA.xci
+  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/example_sg/example_sg.xci
+  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/fpga_model_v2/fpga_model_v2.xci
+  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/model_triphases_200khz/model_triphases_200khz.xci
+  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/model_triphases_220khz/model_triphases_220khz.xci
+  read_ip -quiet c:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/sources_1/ip/second_case/second_case.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.srcs/constrs_1/new/constr.xdc
 OPTRACE "read constraints: implementation" END { }

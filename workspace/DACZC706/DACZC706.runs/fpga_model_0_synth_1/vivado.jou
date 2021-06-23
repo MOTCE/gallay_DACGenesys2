@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jun 23 09:27:10 2021
+# Process ID: 3532
+# Current directory: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/fpga_model_0_synth_1
+# Command line: vivado.exe -log fpga_model_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_model_0.tcl
+# Log file: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/fpga_model_0_synth_1/fpga_model_0.vds
+# Journal file: C:/Users/Projet/Desktop/Recherche/gallay_DACGenesys2/workspace/DACZC706/DACZC706.runs/fpga_model_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fpga_model_0.tcl -notrace
